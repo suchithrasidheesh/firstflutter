@@ -29,8 +29,8 @@ class ListAssignment extends StatelessWidget{
         return Card(
           child: ListTile(
             leading:CircleAvatar(backgroundImage: AssetImage('${image[index]}')),
-            title: Text('${food[index]}'),
-            trailing: Text('${time[index]}'),
+            title: Text('${food[index]}',style: TextStyle(color: Colors.blueAccent)),
+            trailing: Text('${time[index]}',style: TextStyle(color: Colors.blueAccent)),
           ),
 
         );
