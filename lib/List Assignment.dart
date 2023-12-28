@@ -3,9 +3,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp( MaterialApp(
-    home: ListAssignment(),
-  ));
+  runApp(DevicePreview(
+    isToolbarVisible: true,
+      builder: (BuildContext context)=>MaterialApp(
+        useInheritedMediaQuery: true,
+        debugShowCheckedModeBanner: false,
+        home: ListAssignment(),
+      )));
 }
 class ListAssignment extends StatelessWidget{
   var food=['Pasta','Maggi','Cake','Pancake','Pizza','Burger','Fries'];
