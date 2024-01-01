@@ -15,21 +15,20 @@ class ListBuilder extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('ListBuilder'),
-        leading: Icon(Icons.menu),
+        title: const Text('ListBuilder'),
+        leading: const Icon(Icons.menu),
       ),
       body: ListView.builder(itemBuilder: (context,index){
         return Card(
           color:colors[index],
           child: ListTile(
-            leading: CircleAvatar(backgroundImage: AssetImage('${image[index]}'),),
-            title: Text('${title[index]}'),
-            subtitle: Text('${phone[index]}'),
-            trailing: Icon(Icons.call),
+            leading: CircleAvatar(backgroundImage: AssetImage(image[index]),),
+            title: Text(title[index]),
+            subtitle: Text(phone[index]),
+            trailing: const Icon(Icons.call),
           ),
         );
       },itemCount:title.length,),
     );
   }
-
 }
