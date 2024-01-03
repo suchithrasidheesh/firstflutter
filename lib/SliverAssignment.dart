@@ -20,7 +20,7 @@ class SliverAssignment extends StatelessWidget{
           SliverAppBar(
             backgroundColor: Colors.purple,
             pinned: true,
-            floating: false,
+            floating: true,
             title: Text('Kindacode.com'),
             actions: [
               IconButton(onPressed: (){}, icon:Icon(Icons.shopping_cart))
@@ -57,7 +57,7 @@ class SliverAssignment extends StatelessWidget{
             return Container(
                       height: 800,
                       color: Colors.pink,
-              child: Text(''),
+              //child: Text(''),
             );
           },childCount: 1))
         ],
