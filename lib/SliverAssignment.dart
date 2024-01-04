@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +33,7 @@ class SliverAssignment extends StatelessWidget{
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Search',
-                    prefixIcon: Icon(Icons.search),
+                    prefixIcon: Icon(Icons.search,color: Colors.white,),
                     suffixIcon: Icon(Icons.camera_alt)
                   ),
                 ),
@@ -49,7 +47,7 @@ class SliverAssignment extends StatelessWidget{
               width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(top: 150,left: 50,right: 10),
-                child: Text('This is an Awesome shopping platform'),
+                child: Text('This is an Awesome shopping platform',style: TextStyle(color: Colors.white),),
               ),
             );
           },childCount: 1)),
