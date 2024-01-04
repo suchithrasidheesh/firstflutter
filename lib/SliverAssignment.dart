@@ -19,9 +19,9 @@ class SliverAssignment extends StatelessWidget{
             backgroundColor: Colors.purple,
             pinned: true,
             floating: true,
-            title: Text('Kindacode.com'),
+            title: Text('Kindacode.com',style: TextStyle(color: Colors.white)),
             actions: [
-              IconButton(onPressed: (){}, icon:Icon(Icons.shopping_cart))
+              IconButton(onPressed: (){}, icon:Icon(Icons.shopping_cart,color: Colors.white,))
             ],
             bottom: AppBar(
               elevation: 0,
@@ -33,7 +33,7 @@ class SliverAssignment extends StatelessWidget{
                 child: TextField(
                   decoration: InputDecoration(
                     hintText: 'Search',
-                    prefixIcon: Icon(Icons.search,color: Colors.white,),
+                    prefixIcon: Icon(Icons.search),
                     suffixIcon: Icon(Icons.camera_alt)
                   ),
                 ),
@@ -47,7 +47,7 @@ class SliverAssignment extends StatelessWidget{
               width: double.infinity,
               child: Padding(
                 padding: const EdgeInsets.only(top: 150,left: 50,right: 10),
-                child: Text('This is an Awesome shopping platform',style: TextStyle(color: Colors.white),),
+                child: Text('This is an Awesome shopping platform'),
               ),
             );
           },childCount: 1)),

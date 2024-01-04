@@ -8,7 +8,7 @@ class Gridvieweg extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body:GridView(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3),
+      body:GridView(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,mainAxisSpacing: 40,crossAxisSpacing:40),
       children: [
         Container(
           child: Column(
