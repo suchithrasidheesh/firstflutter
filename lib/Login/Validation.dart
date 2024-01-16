@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'HomePage.dart';
+import '../List view/HomePage.dart';
 import 'NewReg.dart';
 void main(){
   runApp(MaterialApp(
