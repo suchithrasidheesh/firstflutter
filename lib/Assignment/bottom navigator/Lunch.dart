@@ -31,7 +31,11 @@ class Lunch extends StatelessWidget{
                 ),
                 Container(
                   child:Text('Burger'),
-                  )
+                  ),
+                Divider(
+                  thickness: 2,
+
+                ),
               ],
             );
           },itemCount:color.length),
