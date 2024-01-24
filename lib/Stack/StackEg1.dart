@@ -43,7 +43,7 @@ class StackEg1 extends StatelessWidget{
           ) ,),),top: 120,height: 800,width:500,),
           Positioned(child: ClipRRect(borderRadius:BorderRadius.circular(30),
             child: Container(
-                child: Image(image:AssetImage('assets/Icons/img.png'),fit: BoxFit.fill,)
+                child: Image(image:AssetImage('assets/Icons/img.svg'),fit: BoxFit.fill,)
                 )),
             left: 200,top: 60,height: 100,width: 100,)
         ],
