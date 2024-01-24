@@ -12,7 +12,8 @@ class Assignment1 extends StatelessWidget {
   var img = [
     'assets/Icons/hotel1.png',
     'assets/Icons/hotel2.png',
-    'assets/Icons/hotel3.png'
+    'assets/Icons/hotel3.png',
+    'assets/Icons/hotel4.png'
   ];
 
   @override
@@ -21,15 +22,14 @@ class Assignment1 extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
         SliverAppBar(
+          pinned: true,
         expandedHeight:170,
         backgroundColor: Colors.blueAccent,
-        floating: false,
-        leading: Icon(Icons.menu, color: Colors.white,),
+           leading: Icon(Icons.menu, color: Colors.white,),
         actions: [
-          Icon(Icons.favorite_border, color: Colors.white,)
+           Icon(Icons.favorite_border, color: Colors.white,)
         ],
-        flexibleSpace:
-            ListView(
+            flexibleSpace: ListView(
               children: [
               Padding(
                 padding: const EdgeInsets.only(top: 60,left: 150),
@@ -42,7 +42,6 @@ class Assignment1 extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
                     color: Colors.white),
-                //color: Colors.white,
                 child: TextField(
                   decoration: InputDecoration(
                       prefixIcon: Icon(Icons.search),
@@ -130,6 +129,7 @@ class Assignment1 extends StatelessWidget {
 
   Widget hotelRooms(int index) {
     return Container(
+      height: 350,width: 350,
        child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -138,24 +138,17 @@ class Assignment1 extends StatelessWidget {
             children: [
               ClipRRect(borderRadius: BorderRadius.circular(40),
                   child: Image(image: AssetImage(img[index],),
-                    height: 200,
+                    height: 250,
                     width: 300,
                      )),
-              Positioned(top: 130, right: 30,
-                child: ClipRRect(borderRadius: BorderRadius.circular(5),
-                  child: Container(height: 30, width: 30, color: Colors.white,),
-                ),
-              ),
-              Positioned(top: 135, right: 30,
-                  child: Text('\$40')),
-              Positioned(top:25,left: 250,
+              Positioned(top: 145, right: 30,height: 30,width: 30,
+                  child: Container(color:Colors.white,child: Center(child: Text('\$40')))),
+              Positioned(top:50,left: 250,
                   child: Icon(Icons.star_border_purple500_outlined)),
             ],
           ),
-          SizedBox(width: 30,),
           Text('Awesome Room near Kakkanad'),
           Text('kakkanad,Kochi'),
-          SizedBox(width: 30,),
           Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment:MainAxisAlignment.center,
@@ -166,7 +159,6 @@ class Assignment1 extends StatelessWidget {
               Icon(Icons.star,color: Colors.green,),
               Icon(Icons.star,color: Colors.green,),
               Text('(Rating 212k)'),
-              SizedBox(width: 30,),
             ],
           ),
         ],
