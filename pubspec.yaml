@@ -41,6 +41,8 @@ dependencies:
   expansion_tile_card: ^3.0.0
   introduction_screen: ^3.1.12
   flutter_svg: ^2.0.9
+  carousel_slider: ^4.2.1
+  liquid_swipe: ^3.1.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2

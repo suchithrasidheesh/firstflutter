@@ -41,7 +41,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   Widget _buildFullscreenImage() {
     return Image.asset(
-      'assets/fullscreen.jpg',
+      'assets/Icons/fullscreen.jpg',
       fit: BoxFit.cover,
       height: double.infinity,
       width: double.infinity,
@@ -50,7 +50,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
   }
 
   Widget _buildImage(String assetName, [double width = 350]) {
-    return Image.asset('assets/$assetName', width: width);
+    return Image.asset('assets/Icons/$assetName', width: width);
   }
 
   @override

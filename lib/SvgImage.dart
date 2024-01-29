@@ -14,5 +14,4 @@ class svgImg extends StatelessWidget{
       ),
     );
   }
-  
 }
