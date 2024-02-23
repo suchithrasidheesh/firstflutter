@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 void main(){
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
@@ -12,40 +12,25 @@ class NewUi extends StatefulWidget{
 }
 
 class _NewUiState extends State<NewUi> {
+  var size,ht,wt;
   @override
   Widget build(BuildContext context) {
+    size=MediaQuery.of(context).size;
+    ht=size.height;
+    wt=size.width;
     return Scaffold(
       body: Stack(
         children: [
           Container(
-            height:double.infinity,width:double.infinity,
+            height: ht,width: wt,
           ),
-          Positioned(height: 200,width: 500,
+          Positioned(height:ht/4,width: wt,
               child: ClipRRect(borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(100,),bottomRight: Radius.circular(100)),
                   child: Container(color:Colors.blue,
-                    child:SvgPicture.asset('assets/svg/person.svg',height: 100,width: 50,)
                   ))),
-          SvgPicture.asset('assets/svg/star.svg',height: 20,width: 20,),
-          Positioned(height: 50,width: 50,top: 20,left: 40,
-              child: SvgPicture.asset('assets/svg/star.svg')),
-          Positioned(left: 300,top: 50,
-            child: Column(//mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Oder and ',style: TextStyle(fontSize:20,fontWeight:FontWeight.bold,color: Colors.white),),
-                Text('Get to door step',style: TextStyle(fontSize:10,fontWeight:FontWeight.bold,color: Colors.white),),
-              ],),),
-          Positioned(right:50,top: 90,
-              child: SvgPicture.asset('assets/svg/tree.svg',height: 80,width: 50,)),
-          Positioned(height: 30,width: 50,top: 50,right: 60,
-              child: SvgPicture.asset('assets/svg/star.svg')),
-          Positioned(height: 50,width: 50,top: 90,left: 70,
-              child: SvgPicture.asset('assets/svg/star.svg')),
-          Positioned(top: 100,left:30,
-              child: SvgPicture.asset('assets/svg/star.svg',height: 20,width: 20,)),
-          SvgPicture.asset('assets/svg/star.svg',height: 20,width: 20,),
           Positioned(left: 80,top: 250,
-            child: Container(height: 250,width: 350,
+            child: Container(height: ht,width: 350,
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white70),
               child: Column(
@@ -58,11 +43,10 @@ class _NewUiState extends State<NewUi> {
                       decoration: InputDecoration(
                         border:OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                         hintText: 'UserName',
+                        helperText: 'Username should be the  name of the student'
                       ),
                     ),
                   ),
-                  SizedBox(height: 5,),
-                  Text('User name should be a valid email.',style:TextStyle(fontSize:10,color: Colors.redAccent[100]),),
                   SizedBox(height: 20,),
                   Padding(
                     padding: const EdgeInsets.only(left: 30,right:25),
@@ -70,21 +54,21 @@ class _NewUiState extends State<NewUi> {
                       decoration: InputDecoration(
                         border:OutlineInputBorder(borderRadius: BorderRadius.circular(20)),
                         hintText: 'Password',
+                        helperText: 'Password should be the admission number',
                         suffixIcon:Icon(Icons.visibility_off_sharp)
                       ),),
                   ),
-                  SizedBox(height: 5,),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 30,right: 8),
-                    child: Text('Password should contain one Uppercase letter, one Special-character,one Digit and 6-digit long.',style:TextStyle(fontSize:10,color: Colors.redAccent[100]),),
-                  ),
+                  SizedBox(height: 10,),
+                  TextButton(onPressed: (){}, child:Text('Forgot password?'))
                 ],
               ),
             ),
           ),
-          Positioned(top: 500,right: 50,
-              child: ElevatedButton(style:ElevatedButton.styleFrom(backgroundColor:Colors.blue),
-                  onPressed:(){} , child:Text('SignIn',style:TextStyle(color: Colors.white),)))
+          Padding(
+            padding: const EdgeInsets.only(top: 550,left: 220),
+            child: ElevatedButton(style:ElevatedButton.styleFrom(backgroundColor:Colors.blue),
+                onPressed:(){} , child:Text('LogIn',style:TextStyle(color: Colors.white),)),
+          )
         ],
       ),
     );

@@ -1,5 +1,3 @@
-import 'dart:js';
-
 import 'package:firstflutterproject/Dummyproducts/dummydata.dart';
 import 'package:firstflutterproject/Dummyproducts/productDetails.dart';
 import 'package:flutter/cupertino.dart';
