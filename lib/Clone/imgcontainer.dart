@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 
 class imgcontainer extends StatelessWidget{
   final Color clr;
@@ -26,11 +27,11 @@ class imgcontainer extends StatelessWidget{
             ),
             Padding(
               padding: const EdgeInsets.only(top:20,left:5 ),
-              child: Text(txt,style: TextStyle(fontSize:15),),
+              child: Text(txt,style: TextStyle(fontSize:15,color: Colors.white),),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 70,left:5),
-              child: Text(txt1,style: TextStyle(fontSize:10),),
+              child: Text(txt1,style: TextStyle(fontSize:10,color: Colors.white),),
             )
           ],
         ),
