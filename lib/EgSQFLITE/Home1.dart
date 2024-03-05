@@ -1,4 +1,3 @@
-import 'package:firstflutterproject/EgSQFLITE/Home2.dart';
 import 'package:firstflutterproject/EgSQFLITE/sqlHelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,25 +36,27 @@ class _DBHome1State extends State<DBHome1> {
               ElevatedButton(onPressed:(){
                 Navigator.push(context,MaterialPageRoute(builder:(context)=>adminAddItem()));
               }, child:Text('AddData'),),
-              SizedBox(width: 10,),
-              ElevatedButton(onPressed:(){
-                //Navigator.push(context,MaterialPageRoute(builder:(context)=>DBHome2(data1:da)));
-              }, child:Text('UploadData')),
-
+              SizedBox(width: 10,)
             ],
           ),
           Expanded(
             child: ListView.builder(itemBuilder:(context,index){
-              return Card(
-                child: ListTile(
-                  title: Text('${data[index]['name']}'),
-                  trailing: IconButton(onPressed: (){
-                    delte(data[index]['id']);
-                  },icon:Icon(Icons.delete),),
-                ),
-              );
+              if(data==null){
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content:Text('User data empty')));
+                    }
+                    else{
+                      return Card(
+                        child: ListTile(
+                          title: Text('${data[index]['name']}'),
+                          trailing: IconButton(onPressed: (){
+                            delte(data[index]['id']);
+                            },icon:Icon(Icons.delete),),
+                        ),
+                      );
+                    }
             },itemCount:data.length),
           ),
+
         ],
       ),
     );

@@ -1,4 +1,3 @@
-import 'package:firstflutterproject/EgSQFLITE/Home2.dart';
 import 'package:firstflutterproject/EgSQFLITE/sqlHelper.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +26,7 @@ class _UserDataState extends State<UserData> {
     return Scaffold(
       body: GridView.builder(gridDelegate:SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),itemBuilder:(context,index){
         return Card(
+          color: Colors.pinkAccent[100],
           child: Column(
             children: [
               Text(data[index]['pname']),
